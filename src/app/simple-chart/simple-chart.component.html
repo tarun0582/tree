@@ -1,0 +1,24 @@
+<div style="text-align:center" class="content">
+    <h1>
+      Welcome to {{title}}!
+    </h1>
+  </div>
+  <div class="sample">
+      <fam-diagram 
+          [items]="items"
+          [pageFitMode]=PageFitMode.AutoSize
+          [cursorItem]=2
+          [linesWidth]=1
+          [arrowsDirection]=GroupByType.Parents
+          [showExtraArrows]=true
+          [linesColor]="'black'"
+          [normalLevelShift]=20
+          [dotLevelShift]=20
+          [lineLevelShift]=20
+          [normalItemsInterval]=10
+          [dotItemsInterval]=30
+          [lineItemsInterval]=30
+          [hasSelectorCheckbox]=Enabled.True
+          [centerOnCursor]=true>
+      </fam-diagram>
+  </div>
