@@ -50,3 +50,14 @@ mat-card-content{
     flex-grow: 1;
     overflow: auto;
 }
+.example-card{
+    color: white;
+}
+
+::ng-deep{
+    .placeholder {
+       opacity: 1;
+       background-color: transparent;
+      cursor: pointer;
+    }
+   }
