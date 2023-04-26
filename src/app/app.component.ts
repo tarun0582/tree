@@ -30,6 +30,11 @@ this.router.navigate(['example5'])
 }
 example6(){
   this.router.navigate(['example6'])
-
+}
+example7(){
+  this.router.navigate(['example7'])
+}
+example8(){
+  this.router.navigate(['example8'])
 }
   }

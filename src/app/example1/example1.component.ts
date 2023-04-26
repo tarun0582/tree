@@ -28,21 +28,21 @@ export class Example1Component {
       parent: null,
       title: 'James Smith',
       description: 'VP, Public Sector',
-      image: this.photos.a
+      image: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     }),
     new OrgItemConfig({
       id: 1,
       parent: 0,
       title: 'Ted Lucas',
       description: 'VP, Human Resources',
-      image: this.photos.a
+      image: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     }),
     new OrgItemConfig({
       id: 2,
       parent: 0,
       title: 'Fritz Stuger',
       description: 'Business Solutions, US',
-      image: this.photos.a
+      image:'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     })
   ];
 }

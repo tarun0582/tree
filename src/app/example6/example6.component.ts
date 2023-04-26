@@ -22,7 +22,7 @@ export class Example6Component {
     new FamItemConfig({ id: 10, parents: [1, 101, 102, 103], title: "10", label: "10", description: "", image: "./assets/photos/i.png" }),
     new FamItemConfig({ id: 11, parents: [1, 101, 102, 103], title: "11", label: "11", description: "", image: "./assets/photos/b.png" }),
     new FamItemConfig({ id: 12, parents: [11], title: "12", label: "12", description: "", image: "./assets/photos/b.png" }),
-    new FamItemConfig({ id: 33, parents: [2, 3, 4, 6, 7, 8, 10, 12], title: "33", label: "33", description: "", image: "./assets/photos/m.png" })
+    new FamItemConfig({ id: 33, parents: [2, 3, 4, 6, 7, 8, 10, 12,10], title: "33", label: "33", description: "", image: "./assets/photos/m.png" })
   ];
 
   annotations = [
@@ -36,7 +36,7 @@ export class Example6Component {
     new LabelAnnotationConfig({ annotationType: AnnotationType.Label, fromItem: 33, toItems: [2], title: "33->2" }),
     new LabelAnnotationConfig({ annotationType: AnnotationType.Label, fromItem: 33, toItems: [3], title: "33->3" }),
     new LabelAnnotationConfig({ annotationType: AnnotationType.Label, fromItem: 33, toItems: [4], title: "33->4" }),
-    new LabelAnnotationConfig({ annotationType: AnnotationType.Label, fromItem: 33, toItems: [6], title: "33->6" }),
+    new LabelAnnotationConfig({ annotationType: AnnotationType.Label, fromItem: 33, toItems: [6,10], title: "33->6" }),
     new LabelAnnotationConfig({ annotationType: AnnotationType.Label, fromItem: 33, toItems: [7], title: "33->7" }),
     new LabelAnnotationConfig({ annotationType: AnnotationType.Label, fromItem: 33, toItems: [8], title: "33->8" })
   ];

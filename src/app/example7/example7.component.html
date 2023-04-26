@@ -1,0 +1,22 @@
+<div class="sample">
+    <fam-diagram 
+        [items]="items"
+        [pageFitMode]=PageFitMode.AutoSize
+        [cursorItem]=1
+        [linesWidth]=1
+        [enableMatrixLayout]=true
+        [groupByType]=GroupByType.Parents
+        [annotations]="annotations"
+        
+        [linesColor]="'black'"
+        [normalLevelShift]=20
+        [dotLevelShift]=20
+        [lineLevelShift]=20
+        [normalItemsInterval]=30
+        [dotItemsInterval]=30
+        [lineItemsInterval]=30
+        (onCursorChanged)="data($event)"
+     
+
+    ></fam-diagram>
+</div>

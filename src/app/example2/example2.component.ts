@@ -41,5 +41,6 @@ export class Example2Component {
       connectorPlacementType: ConnectorPlacementType.Offbeat,
       selectItems: false
     })
+
   ]
 }
