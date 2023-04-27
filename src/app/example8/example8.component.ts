@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FamItemConfig, Enabled, PageFitMode, GroupByType, NeighboursSelectionMode } from 'ngx-basic-primitives';
+import { FamItemConfig, Enabled, PageFitMode, GroupByType, NeighboursSelectionMode, ConnectorAnnotationConfig, AnnotationType, Size, ConnectorShapeType, Colors, ConnectorPlacementType, LineType } from 'ngx-basic-primitives';
 @Component({
   selector: 'app-example8',
   templateUrl: './example8.component.html',
@@ -73,5 +73,22 @@ export class Example8Component {
     new FamItemConfig({ id: 26, parents: [8], description: "VP, NAME Operations", groupTitleColor: "#4169e1", image: "./assets/photos/d.png", itemTitleColor: "#4b0082", title: "Barbara Faulk" }),
     new FamItemConfig({ id: 27, parents: [18], description: "VP, NAME Global Sales & Marketing", groupTitleColor: "#4169e1", image: "./assets/photos/z.png", itemTitleColor: "#4b0082", title: "Stewart Williams" }),
     new FamItemConfig({ id: 28, parents: [18], description: "Sr. VP, NAME Information Services & Merchant Platform", groupTitleColor: "#4169e1", image: "./assets/photos/y.png", itemTitleColor: "#4b0082", title: "Robert Lemieux" })
+  ]
+
+  annotations = [
+    new ConnectorAnnotationConfig({
+      annotationType: AnnotationType.Connector,
+      fromItem: 8,
+      toItem: 18,
+      size: new Size(40, 20),
+      connectorShapeType: ConnectorShapeType.OneWay,
+      color: Colors.Red,
+      offset: 0,
+      lineWidth: 2,
+      lineType: LineType.Dotted,
+      connectorPlacementType: ConnectorPlacementType.Straight,
+      selectItems: false
+    })
+
   ]
 }

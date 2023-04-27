@@ -16,9 +16,12 @@ import { Example3Component } from './example3/example3.component';
 import {MatIconModule} from '@angular/material/icon';
 import { Example4Component } from './example4/example4.component';
 import { Example5Component } from './example5/example5.component';
+import {MatRadioModule} from '@angular/material/radio'; 
 import { Example6Component } from './example6/example6.component';
 import { Example7Component } from './example7/example7.component';
-import { Example8Component } from './example8/example8.component'; 
+import { Example8Component } from './example8/example8.component';
+import { Example9Component } from './example9/example9.component';
+import { Example10Component } from './example10/example10.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,10 +33,13 @@ import { Example8Component } from './example8/example8.component';
     Example5Component,
     Example6Component,
     Example7Component,
-    Example8Component
+    Example8Component,
+    Example9Component,
+    Example10Component
   ],
   imports: [
     BrowserModule,
+    MatRadioModule,
     AppRoutingModule,
     MatIconModule,
     MatSliderModule,
