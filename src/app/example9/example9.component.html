@@ -12,8 +12,12 @@
         [normalLevelShift] = "normalLevelShift"
         [normalItemsInterval] = "normalItemsInterval"
         [pageFitMode]=PageFitMode.AutoSize
+        [linesColor]="'SpringGreen'"
         [cursorItem]=0
+        [annotations]="annotations"
         [hasSelectorCheckbox]=Enabled.False
+        (onCursorChanging)="openDialogBox($event)"
+        
         [templates]="[
             {
                 name: 'xs',
@@ -115,7 +119,7 @@
     <mat-card class="example-card">
         <mat-card-title-group>
             <mat-card-title>{{itemConfig.title}}</mat-card-title>
-            <img mat-card-sm-image [src]="itemConfig.image" [alt]="itemConfig.title" >
+            <!-- <img mat-card-sm-image [src]="itemConfig.image" [alt]="itemConfig.title" > -->
         </mat-card-title-group>
         <mat-card-content>
             <mat-card-subtitle>{{itemConfig.context.email}}</mat-card-subtitle>

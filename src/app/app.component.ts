@@ -41,4 +41,7 @@ example9(){
   this.router.navigate(['example9'])
 
 }
+example10(){
+  this.router.navigate(['example10'])
+}
   }

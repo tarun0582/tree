@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatRadioChange } from '@angular/material/radio';
 import { FamItemConfig, Enabled, PageFitMode, ConnectorAnnotationConfig, AnnotationType, ConnectorShapeType, Size, Colors, ConnectorPlacementType, LineType, NeighboursSelectionMode, GroupByType } from 'ngx-basic-primitives';
 @Component({
   selector: 'app-example10',
@@ -10,8 +11,8 @@ export class Example10Component {
   Enabled = Enabled;
   templateName = "md";
   defaultTemplateName = "md";
-  normalLevelShift = 12;
-  normalItemsInterval = 12;
+  normalLevelShift = 8;
+  normalItemsInterval = 4;
   GroupByType = GroupByType;
   NeighboursSelectionMode = NeighboursSelectionMode;
   scales = [
@@ -47,7 +48,7 @@ export class Example10Component {
     }
   ];
 
-  onChange(event: any) {
+  onChange(event: MatRadioChange) {
     var template = this.scales.find(item => item.defaultTemplateName == event.value);
     this.defaultTemplateName = template!.defaultTemplateName;
     this.normalLevelShift = template!.normalLevelShift;
@@ -65,19 +66,6 @@ export class Example10Component {
     new FamItemConfig({ id: 7, parents: [2],  description: "VP, Enterprise Access and Security Products Division (EASP)", context: { email: "bonnwede@name.com", phone: "(412) 265-2782" }, image: "./assets/photos/i.png", itemTitleColor: "#4b0082", title: "Bonnie Wedel" }),
     new FamItemConfig({ id: 8, parents: [2],  description: "GM, Core File Solutions", context: { email: "melihous@name.com", phone: "(630) 887-1188" }, image: "./assets/photos/p.png", itemTitleColor: "#4b0082", title: "Melissa Houser" }),
     new FamItemConfig({ id: 9, parents: [3],  description: "GM, Software Server Solutions Group", context: { email: "abbilaws@name.com", phone: "530-322-6413" }, image: "./assets/photos/a.png", itemTitleColor: "#4b0082", title: "Abbie Lawson" }),
-    new FamItemConfig({ id: 10, parents: [3], description: "GM, Connected Systems Division", context: { email: "erneputn@name.com", phone: "(626) 831-0555" }, image: "./assets/photos/s.png", itemTitleColor: "#4b0082", title: "Ernest Putnam" }),
-    new FamItemConfig({ id: 11, parents: [4], description: "CFO, Platforms Products & Services", context: { email: "celecrum@name.com", phone: "(419) 578-6479" }, image: "./assets/photos/h.png", itemTitleColor: "#4b0082", title: "Celestina Crum" }),
-    new FamItemConfig({ id: 12, parents: [4], description: "GM, Pricing", context: { email: "cindturn@name.com", phone: "(530) 934-4295"}, image: "./assets/photos/j.png", itemTitleColor: "#4b0082", title: "Cindy Turner" }),
-    new FamItemConfig({ id: 19, parents: [2], description: "VP, Security Technology Unit (STU)", groupTitleColor: "#4169e1", image: "./assets/photos/y.png", itemTitleColor: "#4b0082", title: "Robert Morgan" }),
-    new FamItemConfig({ id: 20, parents: [2], description: "GM, Software Serviceability", groupTitleColor: "#4169e1", image: "./assets/photos/a.png", itemTitleColor: "#4b0082", title: "Ida Benefield" }),
-    new FamItemConfig({ id: 21, parents: [4], description: "GM, Core Operating System Test", groupTitleColor: "#4169e1", image: "./assets/photos/d.png", itemTitleColor: "#4b0082", title: "Vada Duhon" }),
-    new FamItemConfig({ id: 22, parents: [4], description: "GM, Global Platform Technologies and Services", groupTitleColor: "#4169e1", image: "./assets/photos/f.png", itemTitleColor: "#4b0082", title: "William Loyd" }),
-    new FamItemConfig({ id: 23, parents: [6], description: "Sr. VP, NAME & Personal Services Division", groupTitleColor: "#4169e1", image: "./assets/photos/g.png", itemTitleColor: "#4b0082", title: "Craig Blue" }),
-    new FamItemConfig({ id: 24, parents: [6], description: "VP, NAME Communications Services and Member Platform", groupTitleColor: "#4169e1", image: "./assets/photos/h.png", itemTitleColor: "#4b0082", title: "Joel Crawford" }),
-    new FamItemConfig({ id: 25, parents: [8], description: "VP & CFO, NAME",groupTitleColor: "#4169e1", image: "./assets/photos/o.png", itemTitleColor: "#4b0082", title: "Barbara Lang" }),
-    new FamItemConfig({ id: 26, parents: [8], description: "VP, NAME Operations", groupTitleColor: "#4169e1", image: "./assets/photos/d.png", itemTitleColor: "#4b0082", title: "Barbara Faulk" }),
-    new FamItemConfig({ id: 27, parents: [18], description: "VP, NAME Global Sales & Marketing", groupTitleColor: "#4169e1", image: "./assets/photos/z.png", itemTitleColor: "#4b0082", title: "Stewart Williams" }),
-    new FamItemConfig({ id: 28, parents: [18], description: "Sr. VP, NAME Information Services & Merchant Platform", groupTitleColor: "#4169e1", image: "./assets/photos/y.png", itemTitleColor: "#4b0082", title: "Robert Lemieux" })
     
   ];
   annotations = [
@@ -100,7 +88,7 @@ export class Example10Component {
       toItem: 5,
       size: new Size(40, 20),
       connectorShapeType: ConnectorShapeType.OneWay,
-      color: Colors.Red,
+      color: Colors.Blue,
       offset: 0,
       lineWidth: 2,
       lineType: LineType.Dotted,

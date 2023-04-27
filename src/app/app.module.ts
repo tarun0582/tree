@@ -10,6 +10,7 @@ import { Example1Component } from './example1/example1.component';
 import {MatSliderModule} from '@angular/material/slider'; 
 import { FormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card'; 
+import {MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule} from '@angular/material/dialog'; 
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { Example2Component } from './example2/example2.component';
 import { Example3Component } from './example3/example3.component'; 
@@ -21,7 +22,8 @@ import { Example6Component } from './example6/example6.component';
 import { Example7Component } from './example7/example7.component';
 import { Example8Component } from './example8/example8.component';
 import { Example9Component } from './example9/example9.component';
-import { Example10Component } from './example10/example10.component'; 
+import { Example10Component } from './example10/example10.component';
+import { OpenModalComponent } from './open-modal/open-modal.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,11 +37,13 @@ import { Example10Component } from './example10/example10.component';
     Example7Component,
     Example8Component,
     Example9Component,
-    Example10Component
+    Example10Component,
+    OpenModalComponent
   ],
   imports: [
     BrowserModule,
     MatRadioModule,
+    MatDialogModule,
     AppRoutingModule,
     MatIconModule,
     MatSliderModule,
@@ -49,7 +53,9 @@ import { Example10Component } from './example10/example10.component';
     BasicPrimitivesModule,
     MatProgressBarModule,
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

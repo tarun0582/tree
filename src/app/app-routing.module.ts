@@ -10,6 +10,7 @@ import { Example6Component } from './example6/example6.component';
 import { Example7Component } from './example7/example7.component';
 import { Example8Component } from './example8/example8.component';
 import { Example9Component } from './example9/example9.component';
+import { Example10Component } from './example10/example10.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
@@ -22,7 +23,9 @@ const routes: Routes = [
   {path:'example6',component:Example6Component},
   {path:'example7',component:Example7Component},
   {path:'example8',component:Example8Component},
-  {path:'example9',component:Example9Component}
+  {path:'example9',component:Example9Component},
+  {path:'example10',component:Example10Component}
+
 
 ];
 

@@ -1,0 +1,10 @@
+::ng-deep{
+    .mat-mdc-radio-button .mdc-form-field {
+        color: var(--mdc-theme-text-primary-on-background, black);
+    }  
+    .placeholder {
+        opacity: 1;
+        background-color: transparent;
+       cursor: pointer;
+     }
+    }

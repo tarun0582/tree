@@ -127,9 +127,9 @@ export class Example7Component {
 
   ]
 
-
   data(e:any){
     console.log(e)
+    
   }
 
 
