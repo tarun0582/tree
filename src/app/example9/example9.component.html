@@ -87,7 +87,7 @@
 <ng-template #sm let-itemConfig="context" let-isCursor="isCursor">
     <mat-card class="example-card">
         <mat-card-content>
-            <mat-card-title>{{itemConfig.title}}</mat-card-title>
+            <mat-card-title style="color:white">{{itemConfig.title}}</mat-card-title>
             <mat-card-subtitle>{{itemConfig.context.email}}</mat-card-subtitle>
             <mat-card-subtitle>{{itemConfig.context.phone}}</mat-card-subtitle>
         </mat-card-content>
@@ -101,13 +101,10 @@
 <ng-template #md let-itemConfig="context" let-isCursor="isCursor">
     <mat-card class="example-card">
         <mat-card-title-group>
-            <mat-card-title>{{itemConfig.title}}</mat-card-title>
+            <mat-card-title style="color:white">{{itemConfig.title}}</mat-card-title>
             <img mat-card-sm-image [src]="itemConfig.image" [alt]="itemConfig.title" >
         </mat-card-title-group>
-        <mat-card-content>
-            <mat-card-subtitle>{{itemConfig.context.email}}</mat-card-subtitle>
-            <mat-card-subtitle>{{itemConfig.context.phone}}</mat-card-subtitle>
-        </mat-card-content>
+        
         <ng-container *ngIf="isCursor">
             <mat-card-footer>
                 <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
@@ -118,7 +115,7 @@
 <ng-template #lg let-itemConfig="context" let-isCursor="isCursor">
     <mat-card class="example-card">
         <mat-card-title-group>
-            <mat-card-title>{{itemConfig.title}}</mat-card-title>
+            <mat-card-title style="color:white">{{itemConfig.title}}</mat-card-title>
             <!-- <img mat-card-sm-image [src]="itemConfig.image" [alt]="itemConfig.title" > -->
         </mat-card-title-group>
         <mat-card-content>
@@ -135,12 +132,11 @@
 <ng-template #xl let-itemConfig="context" let-isCursor="isCursor">
     <mat-card class="example-card">
         <mat-card-title-group>
-            <mat-card-title>{{itemConfig.title}}</mat-card-title>
-            <mat-card-subtitle>{{itemConfig.context.email}}</mat-card-subtitle>
-            <mat-card-subtitle>{{itemConfig.context.phone}}</mat-card-subtitle>
+            <mat-card-title style="color:white">{{itemConfig.title}}</mat-card-title>
+         
             <img mat-card-sm-image [src]="itemConfig.image" [alt]="itemConfig.title" >
         </mat-card-title-group>
-        <mat-card-content>
+        <mat-card-content style="color: white;">
             {{itemConfig.description}}
         </mat-card-content>
         <ng-container *ngIf="isCursor">
