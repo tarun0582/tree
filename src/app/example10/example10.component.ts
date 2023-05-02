@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatRadioChange } from '@angular/material/radio';
 import { FamItemConfig, Enabled, PageFitMode, ConnectorAnnotationConfig, AnnotationType, ConnectorShapeType, Size, Colors, ConnectorPlacementType, LineType, NeighboursSelectionMode, GroupByType } from 'ngx-basic-primitives';
 @Component({
@@ -6,7 +6,7 @@ import { FamItemConfig, Enabled, PageFitMode, ConnectorAnnotationConfig, Annotat
   templateUrl: './example10.component.html',
   styleUrls: ['./example10.component.scss']
 })
-export class Example10Component {
+export class Example10Component implements OnInit{
   PageFitMode = PageFitMode;
   Enabled = Enabled;
   templateName = "md";
@@ -56,7 +56,7 @@ export class Example10Component {
   }
 
   items = [
-    new FamItemConfig({ id: 0, parents: [],  description: "Chief Executive Officer (CEO)", context: { email: "davidalt@name.com", phone: "(352) 206-7599"}, image: "./assets/photos/q.png", itemTitleColor: "#4169e1", title: "David Dalton" }),
+    new FamItemConfig({ id: 0, parents: [],   description: "Chief Executive Officer (CEO)", context: { email: "davidalt@name.com", phone: "(352) 206-7599"}, image: "./assets/photos/q.png", itemTitleColor: "#4169e1", title: "David Dalton" }),
     new FamItemConfig({ id: 1, parents: [0],  description: "Co-Presidents, Platform Products & Services Division", context: { email: "jeanwhit@name.com", phone: "(505) 791-1689" }, image: "./assets/photos/w.png", itemTitleColor: "#4b0082", title: "Jeanna White" }),
     new FamItemConfig({ id: 2, parents: [0],  description: "Sr. VP, Server & Tools Division", context: { email: "jameholt@name.com", phone: "(262) 215-7998" }, image: "./assets/photos/e.png", itemTitleColor: "#4b0082",  title: "James Holt" }),
     new FamItemConfig({ id: 3, parents: [0],  description: "VP, Server & Tools Marketing and Solutions", context: { email: "thomwill@name.com", phone: "(904) 547-5342" }, image: "./assets/photos/r.png", itemTitleColor: "#4b0082", title: "Thomas Williams" }),
@@ -98,5 +98,8 @@ export class Example10Component {
 
   ]
 
+  ngOnInit(){
+    console.log(this.items)
+  }
 
 }

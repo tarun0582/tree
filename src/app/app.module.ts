@@ -24,6 +24,8 @@ import { Example8Component } from './example8/example8.component';
 import { Example9Component } from './example9/example9.component';
 import { Example10Component } from './example10/example10.component';
 import { OpenModalComponent } from './open-modal/open-modal.component'; 
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,9 +54,13 @@ import { OpenModalComponent } from './open-modal/open-modal.component';
     FormsModule,
     BasicPrimitivesModule,
     MatProgressBarModule,
+    HttpClientModule
   ],
   providers: [
-    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}},
+    { 
+      provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor , multi:true
+    },
   ],
   bootstrap: [AppComponent]
 })
